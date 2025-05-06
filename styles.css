@@ -1,16 +1,23 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f4f4f4;
 }
 
 header {
-    background: #333;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
     color: white;
     padding: 20px;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 nav ul {
@@ -28,6 +35,12 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
 }
 
 section {
@@ -36,6 +49,11 @@ section {
     background: white;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+}
+
+body.dark-mode section {
+    background: #1e1e1e;
 }
 
 footer {
@@ -46,4 +64,53 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ffd700;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.theme-toggle:hover {
+    background: #555;
 }
