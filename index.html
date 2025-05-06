@@ -189,6 +189,59 @@
             text-decoration: none;
             cursor: pointer;
         }
+        .chat-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .chat-button:hover {
+            background: #555;
+        }
+        .chat-modal {
+            display: none;
+            position: fixed;
+            z-index: 1002;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .chat-modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 5px;
+        }
+        .chat-input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .chat-submit {
+            padding: 10px 20px;
+            background-color: #ffcc00;
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .chat-submit:hover {
+            background-color: #ffd700;
+        }
     </style>
 </head>
 <body>
@@ -280,6 +333,19 @@
         </div>
     </div>
 
+    <button class="chat-button" onclick="openChatModal()">💬</button>
+
+    <div id="chatModal" class="chat-modal">
+        <div class="chat-modal-content">
+            <span class="close" onclick="closeChatModal()">&times;</span>
+            <h2>Virtual Assistant</h2>
+            <p>How can I help you today?</p>
+            <input type="text" class="chat-input" id="chatInput" placeholder="Type your message here...">
+            <button class="chat-submit" onclick="sendMessage()">Send</button>
+            <div id="chatResponse"></div>
+        </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         AOS.init({
@@ -303,6 +369,24 @@
         }
         function closeModal() {
             document.getElementById('projectModal').style.display = 'none';
+        }
+        function openChatModal() {
+            document.getElementById('chatModal').style.display = 'block';
+        }
+        function closeChatModal() {
+            document.getElementById('chatModal').style.display = 'none';
+        }
+        function sendMessage() {
+            var input = document.getElementById('chatInput').value;
+            var response = document.getElementById('chatResponse');
+            if (input.toLowerCase() === 'hello') {
+                response.innerHTML = 'Hello! How can I assist you today?';
+            } else if (input.toLowerCase() === 'how are you') {
+                response.innerHTML = 'I am just a virtual assistant, but I am here to help!';
+            } else {
+                response.innerHTML = 'I am not sure how to respond to that. Please try asking something else.';
+            }
+            document.getElementById('chatInput').value = '';
         }
     </script>
 </body>
