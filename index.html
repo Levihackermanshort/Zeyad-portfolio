@@ -5,19 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zeyad Maeen - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.dark-mode {
+            background-color: #121212;
+            color: #f4f4f4;
         }
         header {
-            background: #333;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
             color: white;
             padding: 20px;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         nav ul {
             list-style: none;
@@ -30,6 +37,11 @@
         nav ul li a {
             color: white;
             text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffcc00;
         }
         section {
             padding: 20px;
@@ -37,6 +49,10 @@
             background: white;
             border-radius: 5px;
             box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            transition: background-color 0.3s;
+        }
+        body.dark-mode section {
+            background: #1e1e1e;
         }
         footer {
             text-align: center;
@@ -44,9 +60,52 @@
             background: #333;
             color: white;
         }
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ffcc00;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #ffd700;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background: #555;
+        }
     </style>
 </head>
 <body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark/Light Mode</button>
     <header>
         <h1>Zeyad Maeen</h1>
         <p>Software Engineering Student | Backend Developer</p>
@@ -62,18 +121,25 @@
         </nav>
     </header>
     
-    <section id="about">
+    <div class="hero" data-aos="fade-up">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Explore my journey in software engineering and development.</p>
+        <a href="#contact" class="cta-button">Get in Touch</a>
+    </div>
+    
+    <section id="about" data-aos="fade-up">
         <h2>About Me</h2>
         <p>Software engineering student with over 5 years of hands-on experience in database management and software development. Seeking a challenging software development role to leverage programming and analytical skills.</p>
+        <p>For the latest updates and more information, check out my <a href="https://linkedin.com/in/zezomaeen" target="_blank">LinkedIn profile</a>.</p>
     </section>
 
-    <section id="education">
+    <section id="education" data-aos="fade-up">
         <h2>Education</h2>
         <p><strong>University of Huddersfield, UK</strong> (2024 - Expected 2027)</p>
         <p>Software Engineering BSc (Hons)</p>
     </section>
     
-    <section id="experience">
+    <section id="experience" data-aos="fade-up">
         <h2>Experience</h2>
         <p><strong>Software Developer Intern</strong> - Radical AI (Remote, NYC, USA) (July 2024 - Present)</p>
         <p>Developed web applications and conducted app testing using Firebase, Node.js, and React.js.</p>
@@ -82,12 +148,12 @@
         <p>Trained on Oracle Java JDBC and utilized TOAD for SQL queries, improving query efficiency by 15%.</p>
     </section>
     
-    <section id="projects">
+    <section id="projects" data-aos="fade-up">
         <h2>Projects</h2>
         <p>Developed a Hospital Management System using C++ and HTML.</p>
     </section>
     
-    <section id="skills">
+    <section id="skills" data-aos="fade-up">
         <h2>Skills</h2>
         <ul>
             <li>Programming: C, C++, Python, JavaScript, Java</li>
@@ -95,7 +161,7 @@
         </ul>
     </section>
     
-    <section id="contact">
+    <section id="contact" data-aos="fade-up">
         <h2>Contact</h2>
         <p>Email: <a href="mailto:zeyadmaeen1@gmail.com">zeyadmaeen1@gmail.com</a></p>
         <p>LinkedIn: <a href="https://linkedin.com/in/zezomaeen" target="_blank">linkedin.com/in/zezomaeen</a></p>
@@ -104,5 +170,16 @@
     <footer>
         <p>&copy; 2025 Zeyad Maeen</p>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
 </body>
 </html>
