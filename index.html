@@ -25,6 +25,9 @@
             padding: 20px;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         nav ul {
             list-style: none;
@@ -102,6 +105,44 @@
         .theme-toggle:hover {
             background: #555;
         }
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .scroll-top:hover {
+            background: #555;
+        }
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #ffcc00;
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: #ffd700;
+        }
     </style>
 </head>
 <body>
@@ -146,6 +187,8 @@
         
         <p><strong>Database Internship</strong> - Ultimate Academy (August - October 2023)</p>
         <p>Trained on Oracle Java JDBC and utilized TOAD for SQL queries, improving query efficiency by 15%.</p>
+        
+        <p><strong>Additional Experience</strong> - For more details, visit my <a href="https://www.linkedin.com/in/zezomaeen/" target="_blank">LinkedIn profile</a>.</p>
     </section>
     
     <section id="projects" data-aos="fade-up">
@@ -165,11 +208,19 @@
         <h2>Contact</h2>
         <p>Email: <a href="mailto:zeyadmaeen1@gmail.com">zeyadmaeen1@gmail.com</a></p>
         <p>LinkedIn: <a href="https://linkedin.com/in/zezomaeen" target="_blank">linkedin.com/in/zezomaeen</a></p>
+        <div class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </div>
     </section>
     
     <footer>
         <p>&copy; 2025 Zeyad Maeen</p>
     </footer>
+
+    <button class="scroll-top" onclick="scrollToTop()">↑</button>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
@@ -179,6 +230,9 @@
         });
         function toggleTheme() {
             document.body.classList.toggle('dark-mode');
+        }
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
 </body>
