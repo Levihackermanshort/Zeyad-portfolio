@@ -455,24 +455,71 @@
         }
         function getResponse(message) {
             const responses = {
+                // Greetings
                 'hello': 'Hello! How can I assist you today?',
                 'hi': 'Hi there! How can I help you?',
+                'hey': 'Hey! What can I do for you?',
+                'good morning': 'Good morning! How can I help you today?',
+                'good afternoon': 'Good afternoon! How can I help you today?',
+                'good evening': 'Good evening! How can I help you today?',
                 'how are you': 'I am just a virtual assistant, but I am here to help!',
-                'help': 'I can help you with information about Zeyad\'s portfolio, skills, projects, and more. What would you like to know?',
-                'skills': 'Zeyad has skills in Programming (C, C++, Python, JavaScript, Java) and Web Development (HTML, CSS, MySQL, PostgreSQL, Django, Flask, Firebase).',
-                'projects': 'Zeyad has developed a Hospital Management System using C++ and HTML. Would you like to know more about it?',
-                'contact': 'You can reach Zeyad via email at zeyadmaeen1@gmail.com or through his LinkedIn profile at linkedin.com/in/zezomaeen',
+                'who are you': 'I am Zeyad\'s virtual assistant. I can answer questions about his background, skills, and projects.',
+                // Portfolio
+                'portfolio': 'This is the professional portfolio of Zeyad Maeen, a Software Engineering student and Backend Developer.',
+                'about': 'Zeyad is a passionate software engineering student with over 5 years of experience in database management and software development.',
+                'summary': 'Zeyad is seeking a challenging software development role to leverage his programming and analytical skills.',
+                // Skills
+                'skills': 'Zeyad\'s skills include Programming (C, C++, Python, JavaScript, Java), Web Development (HTML, CSS, MySQL, PostgreSQL, Django, Flask, Firebase), and database management.',
+                'programming languages': 'Zeyad is proficient in C, C++, Python, JavaScript, and Java.',
+                'web development': 'He has experience with HTML, CSS, MySQL, PostgreSQL, Django, Flask, and Firebase.',
+                'backend': 'Zeyad specializes in backend development using Python, Node.js, and SQL databases.',
+                'frontend': 'He is familiar with HTML, CSS, and JavaScript for frontend development.',
+                'database': 'He has hands-on experience with MySQL, PostgreSQL, and Firebase.',
+                // Projects
+                'projects': 'Zeyad has developed a Hospital Management System using C++ and HTML. He has also contributed to various web applications.',
+                'hospital management system': 'The Hospital Management System project manages patient records, appointments, and billing. It was built using C++ and HTML.',
+                'web applications': 'Zeyad has built and tested web applications using Firebase, Node.js, and React.js.',
+                // Education
                 'education': 'Zeyad is currently studying Software Engineering BSc (Hons) at the University of Huddersfield, UK (2024 - Expected 2027).',
-                'experience': 'Zeyad has experience as a Software Developer Intern at Radical AI and a Database Internship at Ultimate Academy. For more details, visit his LinkedIn profile.'
+                'university': 'He attends the University of Huddersfield in the UK.',
+                'degree': 'He is pursuing a Bachelor of Science (Honours) in Software Engineering.',
+                // Experience
+                'experience': 'Zeyad is a Software Developer Intern at Radical AI (Remote, NYC, USA) and previously interned at Ultimate Academy.',
+                'work experience': 'He has experience as a Software Developer Intern at Radical AI and as a Database Intern at Ultimate Academy.',
+                'internship': 'He interned at Radical AI (web development, app testing) and Ultimate Academy (Oracle Java JDBC, SQL queries).',
+                'radical ai': 'At Radical AI, Zeyad developed web applications and conducted app testing using Firebase, Node.js, and React.js.',
+                'ultimate academy': 'At Ultimate Academy, he trained on Oracle Java JDBC and improved SQL query efficiency by 15%.',
+                // Contact
+                'contact': 'You can reach Zeyad via email at zeyadmaeen1@gmail.com or through his LinkedIn profile at linkedin.com/in/zezomaeen.',
+                'email': 'Zeyad\'s email is zeyadmaeen1@gmail.com.',
+                'linkedin': 'Here is Zeyad\'s LinkedIn: https://linkedin.com/in/zezomaeen',
+                // Hobbies
+                'hobbies': 'Zeyad enjoys coding, learning new technologies, and participating in hackathons.',
+                'interests': 'His interests include software engineering, AI, and database systems.',
+                // Technologies
+                'technologies': 'He works with Python, C++, JavaScript, Node.js, Django, Flask, Firebase, MySQL, and PostgreSQL.',
+                'frameworks': 'He uses Django, Flask, and React.js for web development.',
+                // Certifications
+                'certifications': 'Zeyad has completed internships and training in software development and database management.',
+                // Languages
+                'languages': 'He speaks English and Arabic.',
+                // Location
+                'location': 'Zeyad is based in the UK and works remotely with international teams.',
+                // Thanks
+                'thank you': 'You\'re welcome! Let me know if you have any more questions.',
+                'thanks': 'Happy to help! Feel free to ask anything else.',
+                // Fallback
+                'default': "I'm not sure about that. You can ask me about Zeyad's skills, projects, education, experience, contact information, or more."
             };
 
+            // Wide matching for keywords and phrases
             for (let key in responses) {
-                if (message.includes(key)) {
+                if (key !== 'default' && message.includes(key)) {
                     return responses[key];
                 }
             }
 
-            return "I'm not sure about that. You can ask me about Zeyad's skills, projects, education, experience, or contact information.";
+            return responses['default'];
         }
     </script>
 </body>
