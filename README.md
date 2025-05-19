@@ -43,4 +43,4 @@ HEAD
 2. Scroll down to **GitHub Pages**.
 3. Under **Branch**, select `main` and click **Save**.
 4. GitHub will generate a link like:
->>>>>>> f861b423c8857ee09dca577b4e1314e3dbfde211
+
