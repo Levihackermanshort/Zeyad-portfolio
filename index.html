@@ -3,297 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zeyad Maeen - Portfolio</title>
+    <title>Zeyad Maeen | Software Engineer</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        body.dark-mode {
-            background-color: #121212;
-            color: #f4f4f4;
-        }
-        header {
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            color: white;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        nav ul li a:hover {
-            color: #ffcc00;
-        }
-        section {
-            padding: 20px;
-            margin: 20px;
-            background: white;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-            transition: background-color 0.3s;
-        }
-        body.dark-mode section {
-            background: #1e1e1e;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #333;
-            color: white;
-        }
-        .hero {
-            text-align: center;
-            padding: 50px 20px;
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            color: white;
-        }
-        .hero h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        .hero p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
-        .cta-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #ffcc00;
-            color: #333;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        .cta-button:hover {
-            background-color: #ffd700;
-        }
-        .theme-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #333;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .theme-toggle:hover {
-            background: #555;
-        }
-        .scroll-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #333;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .scroll-top:hover {
-            background: #555;
-        }
-        .contact-form {
-            max-width: 500px;
-            margin: 0 auto;
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .contact-form button {
-            padding: 10px 20px;
-            background-color: #ffcc00;
-            color: #333;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .contact-form button:hover {
-            background-color: #ffd700;
-        }
-        .skill-bar {
-            width: 100%;
-            background-color: #f1f1f1;
-            border-radius: 5px;
-            margin: 10px 0;
-        }
-        .skill-progress {
-            height: 20px;
-            background-color: #4CAF50;
-            border-radius: 5px;
-            text-align: center;
-            line-height: 20px;
-            color: white;
-        }
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1001;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.4);
-        }
-        .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            border-radius: 5px;
-        }
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        .chat-button {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            color: white;
-            border: none;
-            padding: 15px;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: all 0.3s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            font-size: 24px;
-            z-index: 1000;
-        }
-        .chat-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 8px rgba(0,0,0,0.2);
-        }
-        .chat-modal {
-            display: none;
-            position: fixed;
-            z-index: 1002;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.4);
-        }
-        .chat-modal-content {
-            background-color: #fefefe;
-            margin: 5% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 90%;
-            max-width: 500px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .chat-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #eee;
-        }
-        .chat-messages {
-            height: 300px;
-            overflow-y: auto;
-            margin-bottom: 20px;
-            padding: 10px;
-            border: 1px solid #eee;
-            border-radius: 5px;
-        }
-        .message {
-            margin: 10px 0;
-            padding: 10px;
-            border-radius: 5px;
-            max-width: 80%;
-        }
-        .user-message {
-            background-color: #e3f2fd;
-            margin-left: auto;
-        }
-        .assistant-message {
-            background-color: #f5f5f5;
-            margin-right: auto;
-        }
-        .chat-input-container {
-            display: flex;
-            gap: 10px;
-        }
-        .chat-input {
-            flex: 1;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        .chat-submit {
-            padding: 10px 20px;
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        .chat-submit:hover {
-            transform: scale(1.05);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark/Light Mode</button>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
     <header>
-        <h1>Zeyad Maeen</h1>
-        <p>Software Engineering Student | Backend Developer</p>
         <nav>
+            <div class="logo">ZM</div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -301,327 +29,186 @@
             </ul>
         </nav>
     </header>
-    
-    <div class="hero" data-aos="fade-up">
-        <h1>Welcome to My Portfolio</h1>
-        <p>I am a <span id="typed-text"></span></p>
-        <a href="#contact" class="cta-button">Get in Touch</a>
-    </div>
-    
-    <section id="about" data-aos="fade-up">
-        <h2>About Me</h2>
-        <p>Junior Software Developer | JS and React Js, Azure Cosmos DB, .NET Core, Unity - WebGL - Game Development Advisory Council and H&S Committee Member at the University of Huddersfield. Member in ECF. Former @Google intern. Greater Leeds Area.</p>
-        <p>At Radical AI, our team developed innovative software solutions, leveraging my expertise in Azure Cosmos DB and .NET Core to enhance database performance and user experience. Balancing my role with academic pursuits, I'm currently studying Software Engineering at The University of Huddersfield, projected to graduate in 2027.</p>
-        <p>My tenure as a Database Developer at Ultimate Academy highlighted my proficiency in cloud technologies, particularly with Cloudflare. This experience, coupled with my ongoing education, reflects my commitment to staying at the forefront of software development and database management.</p>
-        <p>Love to do research and make plans and courses on Game Development and Deep Learning in regard to accelerated GPUs and CPUs. Have created games in C++, JavaScript and many more integrated programming languages whether web based or app based and on many consoles.</p>
-        <p>For the latest updates and more information, check out my <a href="https://linkedin.com/in/zezomaeen" target="_blank">LinkedIn profile</a>.</p>
-    </section>
 
-    <section id="education" data-aos="fade-up">
-        <h2>Education</h2>
-        <p><strong>The University of Huddersfield</strong> (January 2024 - August 2027)</p>
-        <p>Software Engineering, Computer Science</p>
-        <ul>
-            <li>Health and Safety Committee Member</li>
-            <li>Advisory Council Member</li>
-            <li>Student Digital Leader</li>
-        </ul>
-        <p><strong>University of Minnesota</strong> (January 2025 - April 2025)</p>
-        <p>UI Design Specialist, User Interface (UI) Design</p>
-        <p><strong>University of Liverpool</strong> (September 2022 - August 2023)</p>
-        <p>Foundation degree, Aerospace, Aeronautical and Astronautical Engineering</p>
-        <p><strong>St. Fatima Language School - Nasr City</strong> (September 2017 - August 2023)</p>
-        <p>High School Diploma, IGCSE</p>
-    </section>
-    
-    <section id="experience" data-aos="fade-up">
-        <h2>Experience</h2>
-        <p><strong>Manara</strong> (Apr 2025 - Present) — AWS Cloud Computing</p>
-        <ul>
-            <li>Developed AWS Cloud skills, explored core AWS services (EC2, S3, VPC, etc.)</li>
-            <li>Built reliable and efficient systems using the AWS Well-Architected Framework</li>
-            <li>Prepared for AWS Cloud Practitioner certification</li>
-        </ul>
-        <p><strong>Frontend Engineer with React.js</strong> (Mar 2025 - Apr 2025, Manara)</p>
-        <ul>
-            <li>Built and optimized React applications using advanced patterns and state management</li>
-            <li>Developed a feature-rich movie database app using TMDB's API</li>
-        </ul>
-        <p><strong>Alx Ventures Egypt</strong> (2025 - Present) — Data Analyst</p>
-        <ul>
-            <li>Analyzed complex datasets using Python and SQL</li>
-            <li>Developed data analytics solutions for business strategies</li>
-        </ul>
-        <p><strong>Rosebud AI</strong> (Nov 2024 - Present) — Creator of Enigma AI</p>
-        <ul>
-            <li>Developed Enigma AI, a generative AI system for visual media and interactive storytelling</li>
-            <li>Led design and development from ideation to deployment</li>
-        </ul>
-        <p><strong>Enigma AI</strong> (Nov 2024 - Present) — Researcher</p>
-        <p><strong>Radical AI</strong> (Jul 2024 - Sep 2024) — Software Developer</p>
-        <ul>
-            <li>Developed innovative software solutions using Azure Cosmos DB and .NET Core</li>
-            <li>Enhanced database performance and user experience</li>
-        </ul>
-        <p><strong>YAT Learning Centers</strong> (Oct 2023 - Dec 2023) — Web Developer</p>
-        <ul>
-            <li>Designed and built web solutions for educational platforms</li>
-        </ul>
-        <p><strong>Ultimate Academy</strong> (Aug 2023 - Oct 2023) — Database Developer</p>
-        <ul>
-            <li>Specialized in cloud technologies, especially Cloudflare</li>
-            <li>Improved SQL query efficiency and database management</li>
-        </ul>
-        <p><strong>The University of Huddersfield</strong> (2024 - Present)</p>
-        <ul>
-            <li>Health and Safety Committee Member</li>
-            <li>Advisory Council Member</li>
-            <li>Student Digital Leader</li>
-        </ul>
-        <p><strong>English Chess Federation</strong> (Jan 2024 - Present) — CM and AGM</p>
-        <p><strong>BCS, The Chartered Institute for IT</strong> (Jan 2024 - Present) — Academic Associate</p>
-        <p><strong>ProjectSet</strong> (Mar 2025) — Cyber and Technology: Innovation Challenge for Entrepreneurs</p>
-        <ul>
-            <li>Developed a business model canvas and innovative solutions for real-world cyber and technology problems</li>
-        </ul>
-        <p><strong>Freelance Web Developer</strong> (2022 - Present)</p>
-        <ul>
-            <li>Designed and built custom websites for local businesses and NGOs</li>
-            <li>Provided ongoing support and maintenance for client projects</li>
-        </ul>
-        <p><strong>Additional Experience</strong> - For more details, visit my <a href="https://www.linkedin.com/in/zezomaeen/" target="_blank">LinkedIn profile</a>.</p>
-    </section>
-    
-    <section id="projects" data-aos="fade-up">
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>EnigmaAI-Lite</strong>: Official Organisation Website for EnigmaAI-Lite</li>
-            <li><strong>Enigma AI</strong>: Chatbot similar to ChatGPT, generative AI for visual media and interactive storytelling</li>
-            <li><strong>Hospital Management System</strong> (C++, HTML): Patient records, appointments, and billing management</li>
-            <li><strong>DnD Combat Simulator</strong> (Python): Turn-based combat simulator for Dungeons & Dragons</li>
-            <li><strong>Portfolio Website</strong> (HTML, CSS, JS): This interactive personal website and virtual assistant</li>
-            <li><strong>Web Apps</strong>: Various web applications using React.js, Node.js, and Firebase</li>
-            <li><strong>Movie Database App</strong>: Feature-rich app using TMDB's API, React, and advanced frontend patterns</li>
-            <li><strong>Games</strong>: Created games in C++, JavaScript, and Unity for web and consoles</li>
-        </ul>
-        <button onclick="openModal()">View Project Details</button>
-    </section>
-    
-    <section id="skills" data-aos="fade-up">
-        <h2>Skills</h2>
-        <ul>
-            <li><strong>Top Skills:</strong> User Experience (UX), Microservices, Redux.js</li>
-            <li><strong>Programming:</strong> C, C++, Python, JavaScript, Java, .NET Core, Unity, SQL</li>
-            <li><strong>Web Development:</strong> HTML, CSS, MySQL, PostgreSQL, Django, Flask, Firebase, React.js, Node.js, Azure Cosmos DB, Cloudflare</li>
-            <li><strong>Cloud & Data:</strong> AWS, Azure, Cloudflare, Data Analysis, Python, SQL</li>
-            <li><strong>Tools & Technologies:</strong> Git, GitHub, REST APIs, Agile, TOAD, Oracle Java JDBC, Visual Studio Code</li>
-            <li><strong>Soft Skills:</strong> Communication, Teamwork, Problem-solving, Leadership, Adaptability, Research, Planning</li>
-            <li><strong>Languages:</strong> English (Native/Bilingual), Arabic (Native/Bilingual), German (Professional Working), Turkish (Limited Working)</li>
-        </ul>
-        <div class="skill-bar">
-            <div class="skill-progress" style="width: 90%;">90%</div>
-        </div>
-    </section>
-    
-    <section id="certifications" data-aos="fade-up">
-        <h2>Certifications & Awards</h2>
-        <ul>
-            <li>Accelerating Deep Learning with GPUs</li>
-            <li>Accelerated Deep Learning with GPU</li>
-            <li>Introduction to UI Design</li>
-            <li>Google UX Design Specialization</li>
-            <li>Certificate of Completion: Database Management Internship, Ultimate Academy</li>
-            <li>Certificate of Participation: Hackathons and coding competitions</li>
-            <li>CM and AGM, English Chess Federation</li>
-        </ul>
-    </section>
-    
-    <section id="publications" data-aos="fade-up">
-        <h2>Publications</h2>
-        <ul>
-            <li>EnigmaAI-Lite - Official Organisation Website</li>
-            <li>Enigma AI - Chatbot similar to ChatGPT and others</li>
-            <li>Accelerating Deep Learning with GPUs</li>
-            <li>Develop Applications with .NET and Visual Studio Code</li>
-        </ul>
-    </section>
-    
-    <section id="contact" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:zeyadmaeen1@gmail.com">zeyadmaeen1@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/zezomaeen" target="_blank">linkedin.com/in/zezomaeen</a></p>
-        <p>GitHub: <a href="https://github.com/Levihackermanshort" target="_blank">github.com/Levihackermanshort</a></p>
-        <p>Portfolio: <a href="https://levihackermanshort.github.io/Zeyad-portfolio/" target="_blank">levihackermanshort.github.io/Zeyad-portfolio/</a></p>
-        <p>Company: <a href="https://enigmaai-lite.org" target="_blank">enigmaai-lite.org</a></p>
-        <div class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </div>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 Zeyad Maeen</p>
-    </footer>
-
-    <button class="scroll-top" onclick="scrollToTop()">↑</button>
-
-    <div id="projectModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Hospital Management System</h2>
-            <p>This project was developed using C++ and HTML. It includes features for managing patient records, appointments, and billing.</p>
-        </div>
-    </div>
-
-    <button class="chat-button" onclick="openChatModal()">💬</button>
-
-    <div id="chatModal" class="chat-modal">
-        <div class="chat-modal-content">
-            <div class="chat-header">
-                <h2>Virtual Assistant</h2>
-                <span class="close" onclick="closeChatModal()">&times;</span>
-            </div>
-            <div class="chat-messages" id="chatMessages">
-                <div class="message assistant-message">
-                    Hello! I'm your virtual assistant. How can I help you today?
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1 class="glitch" data-text="Zeyad Maeen">Zeyad Maeen</h1>
+                <p class="subtitle">Software Engineering Student | Backend Developer</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="cta-primary">Get in Touch</a>
+                    <a href="#projects" class="cta-secondary">View Projects</a>
                 </div>
             </div>
-            <div class="chat-input-container">
-                <input type="text" class="chat-input" id="chatInput" placeholder="Type your message here..." onkeypress="handleKeyPress(event)">
-                <button class="chat-submit" onclick="sendMessage()">Send</button>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>Software engineering student with over 5 years of hands-on experience in database management and software development. Currently pursuing a BSc in Software Engineering at the University of Huddersfield, UK, while actively working as a Software Developer Intern at Radical AI.</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="number">5+</span>
+                        <span class="label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="number">10+</span>
+                        <span class="label">Projects Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="number">3+</span>
+                        <span class="label">Programming Languages</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Software Developer Intern</h3>
+                        <h4>Radical AI</h4>
+                        <p class="date">July 2024 - Present</p>
+                        <ul>
+                            <li>Developing web applications using Firebase, Node.js, and React.js</li>
+                            <li>Conducting comprehensive app testing and quality assurance</li>
+                            <li>Collaborating with cross-functional teams on project development</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Database Intern</h3>
+                        <h4>Ultimate Academy</h4>
+                        <p class="date">August 2023 - October 2023</p>
+                        <ul>
+                            <li>Trained on Oracle Java JDBC and TOAD for SQL queries</li>
+                            <li>Improved query efficiency by 15% through optimization</li>
+                            <li>Developed and maintained database systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Hospital Management System</h3>
+                    <p>Developed a comprehensive hospital management system using C++ and HTML, featuring patient records, appointment scheduling, and inventory management.</p>
+                    <div class="tech-stack">
+                        <span>C++</span>
+                        <span>HTML</span>
+                        <span>SQL</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Database Optimization Project</h3>
+                    <p>Implemented database optimization techniques using Oracle Java JDBC and TOAD, resulting in 15% improved query efficiency and enhanced system performance.</p>
+                    <div class="tech-stack">
+                        <span>Java</span>
+                        <span>JDBC</span>
+                        <span>Oracle</span>
+                        <span>TOAD</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Web Application Development</h3>
+                    <p>Built modern web applications using Firebase, Node.js, and React.js, implementing real-time data synchronization and responsive user interfaces.</p>
+                    <div class="tech-stack">
+                        <span>React.js</span>
+                        <span>Node.js</span>
+                        <span>Firebase</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span>C/C++</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Python</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span>JavaScript</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 80%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Java</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 75%"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Web Development</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span>HTML/CSS</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span>MySQL/PostgreSQL</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Django/Flask</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 80%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Firebase</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Get in Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:zeyadmaeen1@gmail.com">zeyadmaeen1@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://linkedin.com/in/zezomaeen" target="_blank">linkedin.com/in/zezomaeen</a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Message" required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Zeyad Maeen. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/zezomaeen" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/levihackermanshort" target="_blank"><i class="fab fa-github"></i></a>
             </div>
         </div>
-    </div>
+    </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
-        function toggleTheme() {
-            document.body.classList.toggle('dark-mode');
-        }
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-        var typed = new Typed('#typed-text', {
-            strings: ['Software Engineering Student', 'Backend Developer', 'Database Manager'],
-            typeSpeed: 50,
-            backSpeed: 50,
-            loop: true
-        });
-        function openModal() {
-            document.getElementById('projectModal').style.display = 'block';
-        }
-        function closeModal() {
-            document.getElementById('projectModal').style.display = 'none';
-        }
-        function openChatModal() {
-            document.getElementById('chatModal').style.display = 'block';
-        }
-        function closeChatModal() {
-            document.getElementById('chatModal').style.display = 'none';
-        }
-        function handleKeyPress(event) {
-            if (event.key === 'Enter') {
-                sendMessage();
-            }
-        }
-        function addMessage(message, isUser = false) {
-            const chatMessages = document.getElementById('chatMessages');
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `message ${isUser ? 'user-message' : 'assistant-message'}`;
-            messageDiv.textContent = message;
-            chatMessages.appendChild(messageDiv);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-        }
-        function sendMessage() {
-            const input = document.getElementById('chatInput');
-            const message = input.value.trim();
-            
-            if (message) {
-                addMessage(message, true);
-                
-                // Process the message and get response
-                let response = getResponse(message.toLowerCase());
-                setTimeout(() => {
-                    addMessage(response);
-                }, 500);
-                
-                input.value = '';
-            }
-        }
-        function getResponse(message) {
-            const responses = {
-                // Greetings
-                'hello': 'Hello! How can I assist you today?',
-                'hi': 'Hi there! How can I help you?',
-                'hey': 'Hey! What can I do for you?',
-                'good morning': 'Good morning! How can I help you today?',
-                'good afternoon': 'Good afternoon! How can I help you today?',
-                'good evening': 'Good evening! How can I help you today?',
-                'how are you': 'I am just a virtual assistant, but I am here to help!',
-                'who are you': 'I am Zeyad\'s virtual assistant. I can answer questions about his background, skills, and projects.',
-                // Portfolio
-                'portfolio': 'This is the professional portfolio of Zeyad Maeen, a Software Engineering student and Backend Developer.',
-                'about': 'Zeyad is a passionate software engineering student with over 5 years of experience in database management and software development.',
-                'summary': 'Zeyad is seeking a challenging software development role to leverage his programming and analytical skills.',
-                // Skills
-                'skills': 'Zeyad\'s skills include Programming (C, C++, Python, JavaScript, Java), Web Development (HTML, CSS, MySQL, PostgreSQL, Django, Flask, Firebase), and database management.',
-                'programming languages': 'Zeyad is proficient in C, C++, Python, JavaScript, and Java.',
-                'web development': 'He has experience with HTML, CSS, MySQL, PostgreSQL, Django, Flask, and Firebase.',
-                'backend': 'Zeyad specializes in backend development using Python, Node.js, and SQL databases.',
-                'frontend': 'He is familiar with HTML, CSS, and JavaScript for frontend development.',
-                'database': 'He has hands-on experience with MySQL, PostgreSQL, and Firebase.',
-                // Projects
-                'projects': 'Zeyad has developed a Hospital Management System using C++ and HTML. He has also contributed to various web applications.',
-                'hospital management system': 'The Hospital Management System project manages patient records, appointments, and billing. It was built using C++ and HTML.',
-                'web applications': 'Zeyad has built and tested web applications using Firebase, Node.js, and React.js.',
-                // Education
-                'education': 'Zeyad is currently studying Software Engineering BSc (Hons) at the University of Huddersfield, UK (2024 - Expected 2027).',
-                'university': 'He attends the University of Huddersfield in the UK.',
-                'degree': 'He is pursuing a Bachelor of Science (Honours) in Software Engineering.',
-                // Experience
-                'experience': 'Zeyad is a Software Developer Intern at Radical AI (Remote, NYC, USA) and previously interned at Ultimate Academy.',
-                'work experience': 'He has experience as a Software Developer Intern at Radical AI and as a Database Intern at Ultimate Academy.',
-                'internship': 'He interned at Radical AI (web development, app testing) and Ultimate Academy (Oracle Java JDBC, SQL queries).',
-                'radical ai': 'At Radical AI, Zeyad developed web applications and conducted app testing using Firebase, Node.js, and React.js.',
-                'ultimate academy': 'At Ultimate Academy, he trained on Oracle Java JDBC and improved SQL query efficiency by 15%.',
-                // Contact
-                'contact': 'You can reach Zeyad via email at zeyadmaeen1@gmail.com or through his LinkedIn profile at linkedin.com/in/zezomaeen.',
-                'email': 'Zeyad\'s email is zeyadmaeen1@gmail.com.',
-                'linkedin': 'Here is Zeyad\'s LinkedIn: https://linkedin.com/in/zezomaeen',
-                // Hobbies
-                'hobbies': 'Zeyad enjoys coding, learning new technologies, and participating in hackathons.',
-                'interests': 'His interests include software engineering, AI, and database systems.',
-                // Technologies
-                'technologies': 'He works with Python, C++, JavaScript, Node.js, Django, Flask, Firebase, MySQL, and PostgreSQL.',
-                'frameworks': 'He uses Django, Flask, and React.js for web development.',
-                // Certifications
-                'certifications': 'Zeyad has completed internships and training in software development and database management.',
-                // Languages
-                'languages': 'He speaks English and Arabic.',
-                // Location
-                'location': 'Zeyad is based in the UK and works remotely with international teams.',
-                // Thanks
-                'thank you': 'You\'re welcome! Let me know if you have any more questions.',
-                'thanks': 'Happy to help! Feel free to ask anything else.',
-                // Fallback
-                'default': "I'm not sure about that. You can ask me about Zeyad's skills, projects, education, experience, contact information, or more."
-            };
-
-            // Wide matching for keywords and phrases
-            for (let key in responses) {
-                if (key !== 'default' && message.includes(key)) {
-                    return responses[key];
-                }
-            }
-
-            return responses['default'];
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
