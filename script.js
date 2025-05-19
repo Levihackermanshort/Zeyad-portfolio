@@ -353,6 +353,7 @@ const handleScrollAnimation = () => {
 document.querySelectorAll('section').forEach(section => {
     section.classList.add('scroll-animate');
 });
+handleScrollAnimation(); // Trigger scroll animation on page load
 
 // Throttle scroll event
 let throttleTimer;
