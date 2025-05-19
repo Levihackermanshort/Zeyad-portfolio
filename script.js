@@ -452,8 +452,7 @@ newStyles.textContent = `
         }
     }
 `;
-<<<<<<< HEAD
+HEAD
 document.head.appendChild(newStyles); 
-=======
 document.head.appendChild(newStyles); 
->>>>>>> f861b423c8857ee09dca577b4e1314e3dbfde211
+f861b423c8857ee09dca577b4e1314e3dbfde211
