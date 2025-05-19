@@ -2,7 +2,7 @@
 
 This is my personal portfolio website showcasing my experience, skills, and projects.
 
-<<<<<<< HEAD
+HEAD
 ## Deployment Instructions
 
 1. Clone the repository:
@@ -19,7 +19,7 @@ This is my personal portfolio website showcasing my experience, skills, and proj
    ```
    https://YOUR_GITHUB_USERNAME.github.io/portfolio/
    ```
-=======
+
 ## 📂 Project Structure
 - `index.html` → Main webpage structure
 - `styles.css` → Styling file for the portfolio
